@@ -1,6 +1,6 @@
 Go 语言设计模式集合 
 
-面试中最常被问到的设计模式是：[单例模式](/creational/singleton.md)，工厂模式
+面试中最常被问到的设计模式是：[单例模式](/creational/singleton.md)，[工厂模式](/creational/factory.md)
 
 ## Creational Patterns
 
@@ -8,7 +8,7 @@ Go 语言设计模式集合
 |:-------:|:----------- |:------:|
 | [Abstract Factory](abstract_factory.md) | Provides an interface for creating families of releated objects |  ✘|
 | [Builder](/creational/builder.md) | Builds a complex object using simple objects | ✘ |
-| [Factory Method](/creational/factory.md) | Defers instantiation of an object to a specialized function for creating instances | ✘ |
+| [工厂方法](/creational/factory.md) | 定义一个创建对象的方法，但是使用不同的但实现了同一接口的类的构建方法 | ✔ |
 | [Builder](/creational/builder.md) | Builds a complex object using simple objects | ✘ |
 | [Object Pool](/creational/object-pool.md) | Instantiates and maintains a group of objects instances of the same type | ✘ |
 | [单例模式](/creational/singleton.md) | 限制一个类型只能有一个对象 | ✔ |
