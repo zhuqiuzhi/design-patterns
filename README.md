@@ -35,7 +35,7 @@ Go 语言设计模式集合
 | [Observer](/behavioral/observer.md) | Provide a callback for notification of events/changes to data | ✘ |
 | [Registry](/behavioral/registry.md) | Keep track of all subclasses of a given class | ✘ |
 | [State](/behavioral/state.md) | Encapsulates varying behavior for the same object based on its internal state | ✘ |
-| [Strategy](/behavioral/strategy.md) | Enables an algorithm's behavior to be selected at runtime | ✘ |
+| [策略模式](/behavioral/strategy.md) | Enables an algorithm's behavior to be selected at runtime | ✘ |
 | [Template](/behavioral/template.md) | Defines a skeleton class which defers some methods to subclasses | ✘ |
 | [Visitor](/behavioral/visitor.md) | Separates an algorithm from an object on which it operates | ✘ |
 
