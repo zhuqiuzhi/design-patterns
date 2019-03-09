@@ -101,3 +101,28 @@ f, _ := s.Open("file")
 n, _ := f.Write([]byte("data"))
 defer f.Close()
 ```
+
+## go 标准库里的例子
+
+Open opens a database specified by its database driver name and a
+driver-specific data source name
+
+```go
+func Open(driverName, dataSourceName string) (*DB, error) {
+	driversMu.RLock()
+	driveri, ok := drivers[driverName]
+	driversMu.RUnlock()
+	if !ok {
+		return nil, fmt.Errorf("sql: unknown driver %q (forgotten import?)", driverName)
+	}
+
+	if driverCtx, ok := driveri.(driver.DriverContext); ok {
+		connector, err := driverCtx.OpenConnector(dataSourceName)
+		if err != nil {
+			return nil, err
+		}
+		return OpenDB(connector), nil
+	}
+
+	return OpenDB(dsnConnector{dsn: dataSourceName, driver: driveri}), nil
+```
